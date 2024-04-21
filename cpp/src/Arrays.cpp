@@ -16,26 +16,26 @@ void line(std::string title)
 
 void all_types_lists()
 {
-    // Integer array declaration
-    int intArr[5]; // Array of integers with size 5
+    // Integer array declaration and initialization
+    int intArr[] = {1, 2, 3}; // Array of integers
 
-    // String array declaration
-    std::string stringArr[3]; // Array of strings with size 3
+    // String array declaration and initialization
+    std::string stringArr[] = {"Hello", "World", "!"}; // Array of strings initialized with 3 values 
 
-    // Boolean array declaration
-    bool boolArr[4]; // Array of booleans with size 4
+    // Boolean array declaration and initialization
+    bool boolArr[] = {true, false, true}; // Array of booleans initialized inline
 
-    // Floating-point array declaration
-    float floatArr[6]; // Array of floats with size 6
+    // Floating-point array declaration and initialization
+    float floatArr[] = {1.5f, 2.5f, 3.5f}; // Array of floats 
 
-    // Double array declaration
-    double doubleArr[7]; // Array of doubles with size 7
+    // Double array declaration and initialization
+    double doubleArr[] = {1.234, 5.678, 9.012}; // Array of doubles 
 
-    // Character array declaration
-    char charArr[8]; // Array of characters with size 8
+    // Character array declaration and initialization
+    char charArr[] = {'a', 'b', 'c'}; // Array of characters 
 
-    // Vector declaration (dynamic array)
-    std::vector<int> intVector(5); // Vector of integers with initial size 5
+    // Vector declaration and initialization
+    std::vector<int> intVector = {1, 2, 3}; // Vector of integers 
 
     return 0;
 }
@@ -131,7 +131,7 @@ int main()
     return 0;
 }
 
-// OUTPUT ====> 
+// OUTPUT ====>
 
 // --------------------------- static array ---------------------------
 

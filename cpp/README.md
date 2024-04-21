@@ -100,3 +100,16 @@ Oga Boga
 
 In summary, `std::vector<int>` is more flexible and provides dynamic resizing and memory management capabilities, while `int intArr[]` is a fixed-size array with manual memory management and no dynamic resizing capabilities.
 </details>
+
+### Double vs Float
+<details>
+
+<summary>Click Me </summary>
+As the name implies, a double has 2x the precision of float[1]. In general a double has 15 decimal digits of precision, while float has 7.
+
+Here's how the number of digits are calculated:
+
+	double has 52 mantissa bits + 1 hidden bit: log(253)÷log(10) = 15.95 digits
+
+	float has 23 mantissa bits + 1 hidden bit: log(224)÷log(10) = 7.22 digits
+</details>
