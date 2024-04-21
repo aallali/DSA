@@ -130,3 +130,37 @@ int main()
     delete heapVar; // Deallocate heapVar
     return 0;
 }
+
+// OUTPUT ====> 
+
+// --------------------------- static array ---------------------------
+
+// Index [0] 11
+// Index [1] 22
+// Index [2] 33
+// 0x7ffd64a48d14
+
+// Index [0] 1337
+// Index [1] 10101010
+// Index [2] 1973
+
+// --------------------------- dynamic array ---------------------------
+
+// 0x5bcf2ecf92c0
+// Index [0] 1100
+// Index [1] 2200
+// Index [2] 3300
+
+// --------------------------- overview ---------------------------
+
+// Size of staticArr: 5
+// Size of dynamicArr: 5
+// Size of initializedArr: 5
+// Size of matrix: 3x3
+// Size of pointerArr: 5
+// Size of intVector: 5
+
+// --------------------------- debug addresses ---------------------------
+
+// Address of stackVar: 0x7ffd64a48ce4
+// Address of heapVar: 0x5bcf2ecf92e0
