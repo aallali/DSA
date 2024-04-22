@@ -37,7 +37,7 @@ void all_types_lists()
     // Vector declaration and initialization
     std::vector<int> intVector = {1, 2, 3}; // Vector of integers 
 
-    return 0;
+    return;
 }
 
 void overview()
