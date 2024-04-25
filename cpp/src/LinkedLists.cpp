@@ -4,13 +4,18 @@ struct Node
 {
     int data;
     Node *next;
+    void print()
+    {
+        std::cout << "--: " << data << "\n";
+    }
 };
 
 void printLinkedList(Node *node)
 {
     while (node)
     {
-        std::cout << node->data << "\n";
+        // std::cout << node->data << "\n";
+        node->print();
         node = node->next;
     }
 }
@@ -52,14 +57,29 @@ void append(Node **head, int data)
     last->next = freshNode;
 }
 
+void insertAfter(Node **prevNode, int data)
+{
+    // 1- check if prevNode is NULL
+    if (*prevNode == NULL) {
+        std::cout << "Previous node cannot be NULL";
+        return;
+    }
+    // 2- Prepare a newNode
+    Node *newNode = new Node();
+    newNode->data = data;
+
+    // // 3- Insert newNode after prevNode
+    newNode->next = (*prevNode)->next;
+    (*prevNode)->next = newNode;
+}
+
 int main()
 {
     Node *head = new Node();
     head->data = 1;
 
-    Node *second = new Node();
-    second->data = 2;
-    head->next = second;
+    insertAfter(&head, 2);
+    Node *second = head->next;
 
     Node *third = new Node();
     third->data = 3;
@@ -80,16 +100,16 @@ int main()
 // OUTPUT:
 
 /**
-1
-2
-3
+--: 1
+--: 2
+--: 3
 ------------------------
-0
-1
-2
-3
-4
+--: 0
+--: 1
+--: 2
+--: 3
+--: 4
 ------------------------
-0x5a355939a328
-0x5a3559399eb0
+0x5ff3c1096328
+0x5ff3c1095eb0
 */
