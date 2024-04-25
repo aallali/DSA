@@ -20,7 +20,7 @@ void printLinkedList(Node *node)
     }
 }
 
-void pre_append(Node **node, int data)
+void insertAtTheFront(Node **node, int data)
 {
     // 1- create new node
     Node *freshNode = new Node();
@@ -31,7 +31,7 @@ void pre_append(Node **node, int data)
     *node = freshNode;
 }
 
-void append(Node **head, int data)
+void insertAtTheEnd(Node **head, int data)
 {
     // 1-  prepare fresh node
     Node *freshNode = new Node();
@@ -87,8 +87,8 @@ int main()
 
     printLinkedList(head);
     std::cout << "------------------------\n";
-    pre_append(&head, 0);
-    append(&head, 4);
+    insertAtTheFront(&head, 0);
+    insertAtTheEnd(&head, 4);
     printLinkedList(head);
 
     std::cout << "------------------------\n";
