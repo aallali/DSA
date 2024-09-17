@@ -32,7 +32,7 @@ mod tests {
             .map(|w| w.to_string())
             .collect();
         let output: Vec<Vec<String>> =
-            vec![vec!["bat"], vec!["nat", "tan"], vec!["ate", "eat", "tea"]]
+            vec![vec!["eat", "tea", "ate"], vec!["tan", "nat"], vec!["bat"]]
                 .into_iter()
                 .map(|inner_vec| inner_vec.into_iter().map(|s| s.to_string()).collect())
                 .collect();
