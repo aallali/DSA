@@ -6,8 +6,6 @@
 
 // You must write an algorithm with O(log n) runtime complexity.
 
-
-
 // Example 1:
 
 // Input: nums = [-1,0,3,5,9,12], target = 9
@@ -19,7 +17,6 @@
 // Output: -1
 // Explanation: 2 does not exist in nums so return -1
 
-
 // Constraints:
 
 // 1 <= nums.length <= 104
@@ -28,21 +25,18 @@
 // nums is sorted in ascending order.
 
 function search(nums: number[], target: number): number {
-    let [l, r] = [0, nums.length - 1]
+    let [l, r] = [0, nums.length - 1];
     while (l <= r) {
-        const mid = (l + r) >> 1
-        console.log(nums.slice(l, r), l, r, mid, "Mid number: ", nums[mid])
+        const mid = (l + r) >> 1;
 
-        if (target > nums[mid]) {
-            l = mid + 1
-        } else if (target < nums[mid])
-            r = mid - 1
-        else return mid
+        if (target > nums[mid]) l = mid + 1;
+        else if (target < nums[mid]) r = mid - 1;
+        else return mid;
     }
 
-    return -1
-};
+    return -1;
+}
 
-console.clear()
-console.log(search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7))
-console.log(search([1, 2, 3, 4, 5, 6, 7, 9, 10], 8))
+console.clear();
+console.log(search([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 7));
+console.log(search([1, 2, 3, 4, 5, 6, 7, 9, 10], 8));
